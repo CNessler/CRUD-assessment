@@ -19,7 +19,7 @@ module.exports = {
   },
 
   checked: function (check) {
-    if(check === 'on'){
+  if(check === 'on'){
       return 'white';
     } else {
       return 'black';

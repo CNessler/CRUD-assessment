@@ -7,7 +7,7 @@ var checked = require('../public/javascripts/dom.js');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   articles.find({}, function (err, articles) {
-  res.render('index', {articles: articles});
+  res.render('index', {articles: articles.reverse()});
 
   })
 });
@@ -18,12 +18,10 @@ router.get('/article/new', function (req, res, next) {
 
 router.post('/article/new', function (req, res, next) {
   var color = checked.checked(req.body.checkbox);
-  console.log(color);
   var errorCheck = checked.validate(req.body.title, req.body.excerpt, req.body.body);
   if(errorCheck.length > 0){
     res.render('article/new', {errors: errorCheck})
   } else {
-  // var titleColor = (document.getElementById('#n').style = color)
   articles.insert({title: req.body.title, url: req.body.url, checked: req.body.checkbox, excerpt: req.body.excerpt, body: req.body.body})
   res.redirect('/')
   }
