@@ -74,16 +74,19 @@ textarea {
   /*float: left;*/
   /*margin-right:   80px;*/
 }
-img {
+/*img {
   position: absolute;
   height: 40px;
   width: 1200px;
-  /*opacity: 0.5;*/
-  padding: none;
-}
-/*h2 {
-  background-image: url(art.url);
 }*/
-a {
+
+
+.w {
   text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+.n {
+  text-decoration: none;
+  /*position: absolute;*/
 }

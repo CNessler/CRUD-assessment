@@ -22,7 +22,7 @@ router.post('/article/new', function (req, res, next) {
   if(errorCheck.length > 0){
     res.render('article/new', {errors: errorCheck})
   } else {
-  articles.insert({title: req.body.title, url: req.body.url, excerpt: req.body.excerpt, body: req.body.body})
+  articles.insert({title: req.body.title, url: req.body.url, checked: req.body.checkbox, excerpt: req.body.excerpt, body: req.body.body})
   res.redirect('/')
   }
 })

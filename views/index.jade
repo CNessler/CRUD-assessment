@@ -3,12 +3,12 @@ extends layout
 block content
   div.main
     div.row
-      a(href='/article/new') Add An Article
+      a.w(href='/article/new') Add An Article
       if articles
         each art in articles
           div.new
             h2.pad
-              a(href='/article/'+ art._id)= art.title
+              a.n(href='/article/'+ art._id)= art.title
             img(src= art.url)
             p.pad= art.excerpt
           

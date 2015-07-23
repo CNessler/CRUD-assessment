@@ -20,10 +20,10 @@ block content
           input.check(type='checkbox' name='checkbox' value='true')
         label Excerpt
         p
-          textbox(name='excerpt' cols='30' rows='5' value='#{article.excerpt}')
+          textarea(name='excerpt' cols='30' rows='5' placeholder='#{article.excerpt}')
         label Body  
         p
-          textbox(name='body' placeholder='#{article.body}')
+          textarea(name='body' placeholder='#{article.body}')
         input.button(type='submit' value='Edit Article')
         p
       form(action='/article/'+article._id+'/delete' method='post')
