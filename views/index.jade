@@ -7,8 +7,11 @@ block content
       if articles
         each art in articles
           div.new
-            h2.pad
-              a.n(href='/article/'+ art._id)= art.title
-            img(src= art.url)
+            h2.pad(style='background-image: url(#{art.url})')
+              if checkbox === on
+                a#n(href='/article/'+ art._id style= 'color: white')= art.title
+              if checkbox === null  
+                a#n(href='/article/'+ art._id style= 'color: black')= art.title
+
             p.pad= art.excerpt
           

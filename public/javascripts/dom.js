@@ -16,5 +16,13 @@ module.exports = {
     }
     console.log(errors);
     return errors;
+  },
+
+  checked: function (check) {
+    if(check === 'on'){
+      return 'white';
+    } else {
+      return 'black';
+    }
   }
 }

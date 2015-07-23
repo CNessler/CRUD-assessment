@@ -1,7 +1,9 @@
 body {
   background-image: url(/images/CRUD-background.png);
 }
-
+h2 {
+  width: 100%;
+}
 .main {
   width: 1200px;
   margin: 0 auto;
@@ -86,7 +88,7 @@ textarea {
   color: white;
   font-size: 25px;
 }
-.n {
+#n {
   text-decoration: none;
   /*position: absolute;*/
 }

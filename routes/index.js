@@ -17,11 +17,13 @@ router.get('/article/new', function (req, res, next) {
 })
 
 router.post('/article/new', function (req, res, next) {
+  var color = checked.checked(req.body.checkbox);
+  console.log(color);
   var errorCheck = checked.validate(req.body.title, req.body.excerpt, req.body.body);
-  console.log(checked.validate);
   if(errorCheck.length > 0){
     res.render('article/new', {errors: errorCheck})
   } else {
+  // var titleColor = (document.getElementById('#n').style = color)
   articles.insert({title: req.body.title, url: req.body.url, checked: req.body.checkbox, excerpt: req.body.excerpt, body: req.body.body})
   res.redirect('/')
   }
@@ -41,7 +43,6 @@ router.get('/article/:id/edit', function (req, res, next) {
 
 router.post('/article/:id/edit', function (req, res, next) {
   var errorCheck = checked.validate(req.body.title, req.body.excerpt, req.body.body);
-  console.log(checked.validate);
   if(errorCheck.length > 0){
     res.render('article/new', {errors: errorCheck})
   } else {
