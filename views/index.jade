@@ -7,7 +7,8 @@ block content
       if articles
         each art in articles
           div.new
-            h2
+            h2.pad
               a(href='/article/'+ art._id)= art.title
-            p= art.excerpt
+            img(src= art.url)
+            p.pad= art.excerpt
           
