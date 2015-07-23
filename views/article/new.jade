@@ -1,0 +1,23 @@
+extends ../layout
+block content
+  div.main
+    div.new
+      h1.title New Article
+      form(action='/article/new' method='post')
+        label Title
+        p
+          input(type='text' name='title' require) 
+        label Background URL 
+        p
+          input(type='url' name='url')
+        label.back Background image has dark colors
+        p
+          input.check(type='checkbox' name='checkbox' value='true')
+        label Excerpt
+        p
+          textarea(name='excerpt' cols='30' rows='5' require)
+        label Body  
+        p
+          textarea( name='body')
+        input.button(type='submit' value='Add Article' require)
+      

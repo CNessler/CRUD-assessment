@@ -1,0 +1,26 @@
+extends ../layout
+block content
+  div.main
+    div.new
+      h1.title Edit Article
+      a(href='/') Home Page
+      form(action='/article/'+article._id+'/edit' method='post')
+        label Title
+        p
+          input(type='text' name='title' value='#{article.title}') 
+        label Background URL 
+        p
+          input(type='url' name='url' value='#{article.url}')
+        label.back Background image has dark colors
+        p
+          input.check(type='checkbox' name='checkbox' value='true')
+        label Excerpt
+        p
+          textarea(name='excerpt' cols='30' rows='5' value='#{article.excerpt}')
+        label Body  
+        p
+          textarea(name='body' placeholder='#{article.body}')
+        input.button(type='submit' value='Edit Article')
+        p
+      form(action='/article/'+article._id+'/delete' method='post')
+        input.delete(type='submit' value='Delete Article')

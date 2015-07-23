@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.main
+    div.row
+      a(href='/article/new') Add An Article
+      each art in articles
+        div.new
+          h2
+            a(href='/article/'+ art._id)= art.title
+          p= art.excerpt
+          
