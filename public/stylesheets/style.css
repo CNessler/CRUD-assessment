@@ -41,6 +41,7 @@ input {
 }
 .delete {
   width: 10%;
+  background-color: red;
 }
 .button{
   width: 150px;
