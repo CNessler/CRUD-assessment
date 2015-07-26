@@ -7,11 +7,11 @@ block content
       if articles
         each art in articles
           div.new
-            h2.pad(style='background-image: url(#{art.url})')
+            h2(style='background-image: url(#{art.url})')
               if(art.checked === 'on') 
-                a#n(href='/article/'+ art._id style= 'color: white')= art.title
+                a#n.pad(href='/article/'+ art._id style= 'color: white')= art.title
               else   
-                a#n(href='/article/'+ art._id style= 'color: black')= art.title
+                a#n.pad(href='/article/'+ art._id style= 'color: black')= art.title
 
             p.pad= art.excerpt
           
